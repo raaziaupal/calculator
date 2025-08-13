@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+<link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+<h1 class="top" style="color: blue;text-align: center; /* Centers the text inside the header /
+width: 100%; / Ensure the header takes up the full width */
+margin-left: auto;
+margin-right: auto;">Calculator</h1>
+<hr>
+<br> 
+<h3 class="welcome" >Welcome to the online calculator.</h3>
+<input type="text" id = "display" readonly class = "bar">
+
+<div class="button-grid">
+<button class="numbers" onclick="appendingnumbers('1')">1</button> 
+<button class="numbers" onclick="appendingnumbers('2')">2</button> 
+<button class="numbers" onclick="appendingnumbers('3')">3</button> 
+<button class="operations-button" onclick="appendingnumbers('+')">+</button>
+<button class="numbers" onclick="appendingnumbers('4')">4</button> 
+<button class="numbers" onclick="appendingnumbers('5')">5</button> 
+<button class="numbers" onclick="appendingnumbers('6')">6</button> 
+<button class="operations-button" onclick="appendingnumbers('-')">-</button>
+<button class="numbers" onclick="appendingnumbers('7')">7</button> 
+<button class="numbers" onclick="appendingnumbers('8')">8</button> 
+<button class="numbers" onclick="appendingnumbers('9')">9</button> 
+<button class="operations-button" onclick="appendingnumbers('*')">*</button>
+<button class="AC-button" onclick="clearDisplay('AC')">AC</button> 
+<button class="numbers" onclick="appendingnumbers('0')">0</button> 
+<button class="equal-button" onclick="calculateResult('=')">=</button> 
+<button class="operations-button" onclick="appendingnumbers('/')">/</button> 
+
+
+
+</div>
+
+<script>
+
+    function appendingnumbers(char) 
+    {console.log("hi")
+        const display = document.getElementById("display");
+    display.value += char;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+     function calculateResult() {
+      const display = document.getElementById('display');
+      try {
+        // Evaluate the expression in the display input
+        display.value = eval(display.value);
+      } catch (e) {
+        display.value = 'Error';
+      }
+    }
+
+</script>
+
+</body>
+</html>
+
+<!-- when the number/operation buttons are clicked the character shows up in the box -->
+<!-- AC button = clear everything in box-->
+<!-- equal sign does the math then displays it -->
+

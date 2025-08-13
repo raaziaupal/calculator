@@ -1,0 +1,67 @@
+.top {
+    text-align: center; /* Centers the text inside the header /
+    width: 100%; / Ensure the header takes up the full width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ .button-grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  column-gap: 15px;
+  row-gap: 15px;
+  width: fit-content;
+  margin: 50px auto;
+  }
+
+.button-grid button{
+ width: 65px;
+ height: 40px;
+ border-radius: 10px;
+ font-size: 18px;
+ background-color: #d5d4d4;
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background: linear-gradient(to bottom,white,#adadad);
+  min-height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.AC-button {
+color: rgb(108, 33, 33);
+}
+
+
+.equal-button{
+  color: rgb(6, 114, 67);
+  }
+
+.operations-button{
+color: rgb(48, 68, 193);
+}
+
+.bar {
+width: 330px;
+height: 40px;
+margin-left: 568PX; 
+font-size: x-large;
+font-weight: 100;
+}
+
+.welcome{
+  font-family: "Gill Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  font-weight: 350;
+}
